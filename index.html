@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruchika Singh - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,11 +17,89 @@
         body {
             background-color: rgb(0, 0, 33);
             color: white;
+            font-family: "Poppins", sans-serif;
         }
-        nav{
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(4, 4, 57);
+        }
+
+        nav ul {
             display: flex;
             justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(165, 165, 224);
+        }
+        main hr{
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 30px 70px ;
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
             align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .rightSection {
+            width: 80%;
+            margin: 30px 0;
+        }
+
+        .rightSection img {
+            width: 85%;
+        }
+        
+        /* Utility Class */
+        .purple {
+            color: rgb(143, 64, 217);
+        }
+        #element{
+            color: rgb(143, 64, 217);
+        }
+        .textgrey{
+            color: grey;
+        }
+
+
+    /* Second Section (Work experience and so on)   */
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+        }
+        .secondSection h1{
+            font-size:25px ;
         }
     </style>
 </head>
@@ -29,16 +110,41 @@
             <div class="left">Ruchika's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
                 </ul>
-            </div>
         </nav>
     </header>
 
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi! My name is <span class="purple">Ruchika</span>
+                <div>and I'm a passionate</div>
+                <span id="element"></span>
+
+            </div>
+            <div class="rightSection">
+                <img src="banner-image.png">
+            </div>
+        </section>
+    <hr>
+        <section class="secondSection">
+            <span class="textgrey">Work I have done so far</span>
+            <h1>Work Experience</h1>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+    var typed = new Typed('#element', {
+      strings: ["Web Developer"],
+      typeSpeed: 60,
+    });
+  </script>
 </body>
 
 </html>
